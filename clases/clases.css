@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+/* fuentes del proyecto */
+@font-face {
+    font-family: DMSans;
+    src: url(fuentes/DMSans-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: DMSans;
+    src: url(fuentes/DMSans-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: DMSans;
+    src: url(fuentes/DMSans-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: DMSans;
+    src: url(fuentes/DMSans-Bold.ttf);
+    font-weight: 700;
+}
+
+/* colores del proyecto */
+:root{
+    --color_principal: #00E5D1;
+    --color_fondo:     #0A0A0A;
+    --color_apoyo:     #A1A1AA;
+    --color_texto:     #F4F4F5;
+}
+
+body{
+    font-family: DMSans,sans-serif;
+    background-color: var(--color_fondo);
+    color: var(--color_texto);
+}
+
+/* encabezado */
+#encabezado{
+    height: 60px;
+    background-color: var(--color_fondo);
+    border-bottom: 1px solid var(--color_apoyo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#titulo_clases h1{
+  padding-top: 20px;
+    text-align: center;
+}
+
+#encabezado a, #pie a{
+    text-decoration: none;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color_texto);
+    font-weight: 600;
+}
+
+#logo span{
+    text-align: left;
+}
+
+/* reemplazar por img del logo */
+.caja_logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* menu de navegacion */
+#menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+#menu a{
+    color: var(--color_texto);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#menu a:hover{
+    color: var(--color_principal);
+}
+
+
+/* boton inscribete */
+#btn_inscribete{
+    background-color: var(--color_principal);
+    color: var(--color_fondo);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+#menu a#btn_inscribete{
+    color: var(--color_fondo);
+}
+
+#menu a#btn_inscribete:hover{
+    color: var(--color_fondo);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* pie de pagina */
+#pie{
+    background-color: #111111;
+    padding: 50px 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+#footer_logo{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#footer_logo span{
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+}
+
+#footer_logo p{
+    font-size: 12px;
+    color: var(--color_apoyo);
+    text-align: left;
+}
+
+/* iconos de rrss */
+#redes{
+    display: flex;
+    gap: 10px;
+}
+
+.caja_red{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* columnas de links */
+.columna_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.columna_footer h4{
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--color_texto);
+}
+
+.columna_footer a{
+    color: var(--color_apoyo);
+    font-size: 13px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.columna_footer a:hover{
+    color: var(--color_principal);
+}
+
+/* franja del footer */
+#footer_bottom{
+    width: 100%;
+    border-top: 1px solid #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer_bottom p{
+    font-size: 12px;
+    color: var(--color_apoyo);
+    text-align: left;
+}
+
+#footer_bottom a{
+    color: var(--color_apoyo);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+#footer_bottom a:hover{
+    color: var(--color_principal);
+}
+
+/* ── SECCIÓN CLASES ── */
+.contenedor-clases {
+    padding: 2rem 4rem;
+}
+
+.grilla-clases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+/* ── IMAGEN ── */
+.imagen-clase img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.imagen-clase img{
+    transition: transform .3s;
+}
+
+.tarjeta-clase:hover .imagen-clase img{
+    transform: scale(1.05);
+}
+
+
+/* ── TARJETA ── */
+.tarjeta-clase {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+}
+
+/* ── TEXTOS DENTRO DE LA TARJETA ── */
+.nombre-clase {
+    font-family: DMSans,sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem 1rem 0.4rem;
+    text-transform: uppercase;
+}
+
+.descripcion-clase {
+    font-family: DMSans,sans-serif;
+    font-size: 0.875rem;
+    color: var(--color_apoyo);
+    line-height: 1.5;
+    margin: 0 1rem;
+}
+
+.enlace-saber-mas {
+    font-family: DMSans, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color_fondo);
+    text-decoration: none;
+    margin: 1rem 1rem 0;
+    display: inline-block;
+    background: var(--color_principal);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    transition: 0.3s;
+    align-self: flex-start;
+text-align: center;}
+
+
+.enlace-saber-mas:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: var(--color_texto);
+}
+
+/* ── BANNER PLANES ── */
+.banner-planes {
+    margin: 1.5rem 4rem 2.5rem;
+    background: var(--color_texto);
+    border-radius: 2rem;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.banner-titulo {
+    font-family: DMSans,sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color_fondo);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.banner-descripcion {
+    font-family: DMSans,sans-serif;
+    font-size: 0.95rem;
+    color: var(--color_fondo);
+}
+
+.boton-inscribirse {
+    font-family: DMSans,sans-serif;
+    background: var(--color_principal);
+    color: var(--color_fondo);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.boton-inscribirse:hover {
+    color: var(--color_fondo);
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+/* ── TÍTULO DE SECCIÓN HORARIO ── */
+.titulo-seccion {
+    padding: 20px 40px 60px 60px;
+    font-family: DMSans,sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ── HORARIOS ── */
+.horarios-section{padding: 0em 4rem 3rem;
+}
+
+
+.tabla-horarios {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 60px;
+    
+}
+
+.tabla-horarios th {
+    font-family: DMSans,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: var(--color_principal);
+    color: #111;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border: 1px solid #999;
+}
+
+.tabla-horarios td {
+    font-family: DMSans,S,sans-serif;
+    font-size: 0.875rem;
+    background: var(--color_fondo);
+    color: var(--color_texto);
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border: 1px solid #b0aeac;
+    height: 3.5rem;
+}
+
+.tabla-horarios tr:hover td {
+    background: var(--color_principal);
+}
+
+@media (max-width: 768px) {
+    .contenedor-clases,
+    .contenedor-horarios {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .banner-planes {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        gap: 1.5rem;
+    }
+
+    .grilla-clases {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
