@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Power Gym</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header id="encabezado">
+        <a href="../index.html" id="logo">
+                    <div class="caja_logo" style="background-image:url('img_blog/Logo - PG.png');"></div>
+             <span>Power Gym</span>
+        </a>
+        <nav id="menu">
+            <a href="nosotros.html">Sobre nosotros</a>
+            <a href="../planes/planes.html">Planes</a>
+            <a href="../clases/clases.html">Clases</a>
+            <a href="../coach_formulario/coach.html">Personal Coach</a>
+            <a href="blog.html">Blog</a>
+            <a href="../planes/formulario_planes/form_planes.html" id="btn_inscribete">Inscríbete</a>
+        </nav>
+    </header>
+
+    <section id="titulo_blog">
+        <h1>Blog Power Gym</h1>
+        <p id="subtitulo_blog">Entrena con información respaldada por expertos. Descubre rutinas, nutrición, recuperación y consejos para llevar tu rendimiento al siguiente nivel.</p>
+    </section>
+
+    <section id="destacado">
+        <div id="destacado_carrusel">
+
+            <input type="radio" name="destacado_radio" id="rd-1" class="radio_destacado" checked>
+            <input type="radio" name="destacado_radio" id="rd-2" class="radio_destacado">
+            <input type="radio" name="destacado_radio" id="rd-3" class="radio_destacado">
+
+            <!-- Destacado 1 -->
+            <div class="destacado_item" id="ditem-1">
+                <div class="destacado_slide">
+                    <div class="caja_img grande" style="background-image:url('img_blog/destacadoblog_1.png');"></div>
+                    <div id="info_destacada">
+                        <div class="fila_tags">
+                            <span class="tag">Ejercicios</span>
+                        </div>
+                        <h2>5 ejercicios clave para ganar fuerza y masa muscular</h2>
+                        <p>Descubre los ejercicios fundamentales para desarrollar fuerza, aumentar la masa muscular y mejorar tu rendimiento de forma segura.</p>
+                        <a href="articulo.html" class="link_leer">Leer más</a>
+                    </div>
+                </div>
+                <!-- dot1 -->
+                <div class="controles_destacado">
+                    <div class="puntos_destacado">
+                        <label for="rd-1" class="punto activo"></label>
+                        <label for="rd-2" class="punto"></label>
+                        <label for="rd-3" class="punto"></label>
+                    </div>
+                    <div class="flechas_destacado">
+                        <label for="rd-3" class="flecha">
+                            <img src="img_blog/left arrow.png" alt="Anterior">
+                        </label>
+                        <label for="rd-2" class="flecha">
+                            <img src="img_blog/right arrow.png" alt="Siguiente">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destcado 2 -->
+            <div class="destacado_item" id="ditem-2">
+                <div class="destacado_slide">
+                    <div class="caja_img grande" style="background-image:url('img_blog/destacadoblog_2.png');"></div>
+                    <div id="info_destacada">
+                        <div class="fila_tags">
+                            <span class="tag">Educación</span>
+                        </div>
+                        <h2>Los errores que frenan tu progreso en el gimnasio</h2>
+                        <p>Conoce los principios esenciales del entrenamiento para evitar el estancamiento y seguir avanzando semana a semana.</p>
+                    </div>
+                </div>
+                <!-- dot2-->
+                <div class="controles_destacado">
+                    <div class="puntos_destacado">
+                        <label for="rd-1" class="punto"></label>
+                        <label for="rd-2" class="punto activo"></label>
+                        <label for="rd-3" class="punto"></label>
+                    </div>
+                    <div class="flechas_destacado">
+                        <label for="rd-1" class="flecha">
+                            <img src="img_blog/left arrow.png" alt="Anterior">
+                        </label>
+                        <label for="rd-3" class="flecha">
+                            <img src="img_blog/right arrow.png" alt="Siguiente">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destcado 3 -->
+            <div class="destacado_item" id="ditem-3">
+                <div class="destacado_slide">
+                    <div class="caja_img grande" style="background-image:url('img_blog/destacadoblog_3.png');"></div>
+                    <div id="info_destacada">
+                        <div class="fila_tags">
+                            <span class="tag">Nutrición</span>
+                        </div>
+                        <h2>Qué comer antes y después de entrenar para rendir mejor</h2>
+                        <p>Conoce los alimentos ideales para tener energía durante el entrenamiento y recuperarte más rápido después.</p>
+                    </div>
+                </div>
+                <!-- dot3 -->
+                <div class="controles_destacado">
+                    <div class="puntos_destacado">
+                        <label for="rd-1" class="punto"></label>
+                        <label for="rd-2" class="punto"></label>
+                        <label for="rd-3" class="punto activo"></label>
+                    </div>
+                    <div class="flechas_destacado">
+                        <label for="rd-2" class="flecha">
+                            <img src="img_blog/left arrow.png" alt="Anterior">
+                        </label>
+                        <label for="rd-1" class="flecha">
+                            <img src="img_blog/right arrow.png" alt="Siguiente">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- filtros con chips -->
+    <section id="filtros_wrapper">
+
+        <!-- radios ocultos: guardan el filtro que está activo -->
+        <input type="radio" name="filtro" id="rf-todos" class="radio_filtro" checked>
+        <input type="radio" name="filtro" id="rf-ejercicios" class="radio_filtro">
+        <input type="radio" name="filtro" id="rf-educacion" class="radio_filtro">
+        <input type="radio" name="filtro" id="rf-nutricion" class="radio_filtro">
+        <input type="radio" name="filtro" id="rf-saludmental" class="radio_filtro">
+        <input type="radio" name="filtro" id="rf-consejos" class="radio_filtro">
+        <input type="radio" name="filtro" id="rf-motivacion" class="radio_filtro">
+        <input type="radio" name="filtro" id="rf-soporte" class="radio_filtro">
+
+        <div id="filtros">
+            <label for="rf-todos" class="filtro">Últimas noticias</label>
+            <label for="rf-ejercicios" class="filtro">Ejercicios</label>
+            <label for="rf-educacion" class="filtro">Educación</label>
+            <label for="rf-nutricion" class="filtro">Nutrición</label>
+            <label for="rf-saludmental" class="filtro">Salud Mental</label>
+            <label for="rf-consejos" class="filtro">Consejos</label>
+            <label for="rf-motivacion" class="filtro">Motivación</label>
+            <label for="rf-soporte" class="filtro">Soporte</label>
+        </div>
+
+        <!-- seccion ultimas noticias -->
+        <section id="ultimas_noticias">
+            <h2>Últimas noticias</h2>
+            <div class="fila">
+
+                <a href="articulo.html" class="columna card_articulo cat-ejercicios">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Ejercicios1.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Ejercicios</span>
+                        <h3>5 ejercicios clave para ganar fuerza y masa muscular</h3>
+                        <p>Descubre una rutina efectiva para desarrollar músculo.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Coach_Laura.png');"></span>
+                            <span>Coach Laura</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-educacion">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Educacion1.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Educación</span>
+                        <h3>Los errores que frenan tu progreso en el gimnasio</h3>
+                        <p>Aprende los principios esenciales del entrenamiento para evitar estancarte.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Coach_Roberto.png');"></span>
+                            <span>Coach Roberto</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-nutricion">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Nutricion.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Nutrición</span>
+                        <h3>Qué comer antes y después de entrenar para rendir mejor</h3>
+                        <p>Conoce los alimentos ideales para aumentar tu energía.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Nutri_Susan.png');"></span>
+                            <span>Nutricionista Susan</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-saludmental">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Saludmental.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Salud Mental</span>
+                        <h3>Cómo el ejercicio mejora tu salud mental y reduce el estrés</h3>
+                        <p>Descubre por qué entrenar regularmente ayuda a mejorar tu estado de ánimo.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Ps_Julio.png');"></span>
+                            <span>Ps. Julio</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-consejos">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Consejos.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Consejos</span>
+                        <h3>7 consejos para mantener la constancia en el gimnasio</h3>
+                        <p>Aplica hábitos simples que te ayudarán a entrenar con disciplina.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Coach_Laura.png');"></span>
+                            <span>Coach Laura</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-motivacion">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Motivacion.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Motivación</span>
+                        <h3>La motivación te inicia, la disciplina te transforma</h3>
+                        <p>Aprende a mantener el compromiso con tus objetivos todos los días.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Coach_Laura.png');"></span>
+                            <span>Coach Laura</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-soporte">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/soporte.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Soporte</span>
+                        <h3>¿Necesitas ayuda? Resolvemos tus dudas más frecuentes</h3>
+                        <p>Encuentra información sobre membresías, horarios, clases y pagos.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Miguel_Plataforma.png');"></span>
+                            <span>Miguel Plataforma</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-ejercicios">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Ejercicio2.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Ejercicios</span>
+                        <h3>Cómo crear una rutina de entrenamiento según tu objetivo</h3>
+                        <p>Aprende a organizar tus ejercicios para ganar músculo o perder grasa.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Coach_Roberto.png');"></span>
+                            <span>Coach Roberto</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+                <a href="articulo.html" class="columna card_articulo cat-educacion">
+                    <div class="caja_img mediana" style="background-image:url('img_blog/Educacion2.png');"></div>
+                    <div class="info_card">
+                        <span class="tag">Educación</span>
+                        <h3>Principios básicos del fitness que todos deberían conocer</h3>
+                        <p>Comprende los fundamentos del entrenamiento y la nutrición.</p>
+                        <div class="autor_card">
+                            <span class="icono_autor" style="background-image:url('img_blog/Coach_Roberto.png');"></span>
+                            <span>Coach Roberto</span>
+                        </div>
+                    <span class="link_leer">Leer más</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </section>
+
+    <!-- seccion empieza hoy -->
+    <section id="empieza_hoy">
+        <h2>Empieza hoy</h2>
+        <p id="subtitulo_empieza">Da el primer paso hacia tu mejor versión. Estamos aquí para ayudarte.</p>
+        <div class="fila">
+            <div class="columna">
+                <div class="card_accion">
+                    <div class="caja_icono" style="background-image:url('iconos/sede_icon.png');"></div>
+                    <h3>Encuentra un Power Gym cercano</h3>
+                    <p>Encuentra la sede más cercana y comienza a entrenar cuando quieras.</p>
+                    <a href="" class="btn_accion">Ver sedes</a>
+                </div>
+            </div>
+            <div class="columna">
+                <div class="card_accion">
+                    <div class="caja_icono" style="background-image:url('iconos/beneficios_icon.png');"></div>
+                    <h3>Explora nuestros beneficios</h3>
+                    <p>Conoce todo lo que obtienes al ser parte de Power Gym.</p>
+                    <a href="" class="btn_accion">Ver beneficios</a>
+                </div>
+            </div>
+            <div class="columna">
+                <div class="card_accion">
+                    <div class="caja_icono" style="background-image:url('iconos/inscripcion_icon.png');"></div>
+                    <h3>Déjanos tus datos</h3>
+                    <p>Solicita información y da el primer paso hacia tus objetivos.</p>
+                    <a href="../planes/formulario_planes/form_planes.html" class="btn_accion">Inscribirme</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer-->
+    <footer id="pie">
+        <div id="footer_logo">
+                    <div class="caja_logo" style="background-image:url('img_blog/Logo - PG.png');"></div>
+            <span>Power Gym</span>
+            <p>Tu gimnasio de confianza para alcanzar tus objetivos de fuerza, salud y bienestar.</p>
+            <div id="redes">
+                <a href="" target="_blank">
+                    <div class="caja_red" style="background-image:url('iconos/fb_icon.png');"></div></a>
+                <a href="" target="_blank">
+                    <div class="caja_red" style="background-image:url('iconos/inst_icon.png');"></div></a>
+            </div>
+        </div>
+        <nav class="columna_footer">
+            <h4>Power Gym</h4>
+            <a href="">Sobre nosotros</a>
+            <a href="">Nuestras sedes</a>
+            <a href="">Trabaja con nosotros</a>
+            <a href="../planes/planes.html">Planes y precios</a>
+        </nav>
+        <nav class="columna_footer">
+            <h4>Servicios</h4>
+            <a href="">Clases grupales</a>
+            <a href="../coach_formulario/coach_formulario/Coach.html">Personal Coach</a>
+            <a href="">Nutrición</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <nav class="columna_footer">
+            <h4>Ayuda</h4>
+            <a href="">Preguntas frecuentes</a>
+            <a href="">Contacto</a>
+            <a href="">Política de privacidad</a>
+            <a href="">Términos y condiciones</a>
+        </nav>
+        <div id="footer_bottom">
+            <p>©2026 Power Gym. Derechos reservados</p>
+            <a href="">Política de privacidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>
