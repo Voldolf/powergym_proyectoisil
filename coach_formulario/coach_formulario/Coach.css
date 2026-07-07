@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+/* fuentes del proyecto */
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans-Thin.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("../fuentes/DMSans.ttf") format("truetype");
+    font-weight: 300 900;
+}
+
+/* colores del proyecto */
+:root {
+    --color_principal: #00E5D1;
+    --color_fondo: #0A0A0A;
+    --color_apoyo: #A1A1AA;
+    --color_texto: #F4F4F5;
+}
+
+body {
+    font-family: DMSans, sans-serif;
+    background-color: var(--color_fondo);
+    color: var(--color_texto);
+}
+
+main,
+section,
+article,
+.caja_img {
+    position: relative;
+    z-index: 1;
+}
+
+/* encabezado */
+#encabezado {
+    height: 60px;
+    background-color: var(--color_fondo);
+    border-bottom: 1px solid var(--color_apoyo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#encabezado a,
+#pie a {
+    text-decoration: none;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color_texto);
+    font-weight: 600;
+}
+
+#logo span {
+    text-align: left;
+}
+
+.caja_logo {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color_principal);
+    border-radius: 4px;
+}
+
+.logo_img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* menu de navegacion */
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+#menu a {
+    color: var(--color_texto);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#menu a:hover {
+    color: var(--color_principal);
+}
+
+/* boton inscribete */
+#btn_inscribete {
+    background-color: var(--color_principal);
+    color: var(--color_fondo);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+#menu a#btn_inscribete {
+    color: var(--color_fondo);
+}
+
+#menu a#btn_inscribete:hover {
+    color: var(--color_fondo);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* cajas que representan imagenes - reemplazar por img */
+.caja_img {
+    background-color: var(--color_apoyo);
+    border-radius: 10px;
+    position: relative;
+}
+
+.caja_img::before,
+.caja_img::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--color_fondo);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.caja_img::before {
+    transform: rotate(45deg);
+}
+
+.caja_img::after {
+    transform: rotate(-45deg);
+}
+
+.tag {
+    border: 1px solid var(--color_apoyo);
+    color: var(--color_texto);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.linea_divisora {
+    width: 120px;
+    height: 4px;
+    background-color: var(--color_principal);
+    margin: 18px 0;
+}
+
+/* personal coach */
+#coach_principal {
+    width: 80%;
+    margin: 40px auto 30px auto;
+    background-color: #1A1A1A;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+}
+
+#texto_coach {
+    max-width: 360px;
+}
+
+#texto_coach h1 {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#texto_coach p {
+    color: var(--color_apoyo);
+    font-size: 14px;
+    text-align: left;
+}
+
+.coach_grande {
+    width: 360px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+.marca_coach {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 229, 209, 0.45);
+    background:
+        radial-gradient(circle at center, rgba(0, 229, 209, 0.18), transparent 58%),
+        #111111;
+    padding: 24px;
+}
+
+.marca_coach img {
+    width: min(210px, 80%);
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 18px rgba(0, 229, 209, 0.25));
+}
+
+/* entrenadores */
+#entrenadores {
+    width: 86%;
+    margin: auto;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card_coach {
+    min-height: 390px;
+    background-color: #1A1A1A;
+    border-radius: 12px;
+    padding: 14px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.card_coach:hover {
+    border: 1px solid var(--color_principal);
+    transform: scale(1.02);
+}
+
+.coach_foto {
+    width: 100%;
+    height: 210px;
+    margin: 0 auto 15px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--color_apoyo);
+    border: 1px solid rgba(0, 229, 209, 0.25);
+}
+
+.coach_foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.card_coach h3 {
+    color: var(--color_texto);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card_coach p {
+    color: var(--color_apoyo);
+    font-size: 12px;
+    line-height: 1.35;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* llamado final */
+#agenda {
+    width: 80%;
+    margin: 0 auto 80px auto;
+    background-color: #1A1A1A;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 28px 36px;
+}
+
+#agenda h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+#agenda p {
+    color: var(--color_apoyo);
+    font-size: 14px;
+    text-align: left;
+}
+
+.btn_agenda {
+    background-color: var(--color_principal);
+    color: var(--color_fondo);
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.3s;
+    min-width: 220px;
+}
+
+.btn_agenda:hover {
+    transform: scale(1.1);
+}
+
+/* pie de pagina */
+#pie {
+    background-color: #111111;
+    padding: 50px 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+#footer_logo {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#footer_logo span {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+}
+
+#footer_logo p {
+    font-size: 12px;
+    color: var(--color_apoyo);
+    text-align: left;
+}
+
+.logo_footer_img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    display: block;
+}
+
+/* iconos de redes sociales */
+#redes {
+    display: flex;
+    gap: 10px;
+}
+
+.caja_red {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: transparent;
+    transition: transform 0.3s;
+}
+
+.caja_red img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+}
+
+.caja_red[aria-label="Instagram"] img {
+    width: 32px;
+    height: 32px;
+}
+
+.caja_red:hover {
+    transform: scale(1.1);
+}
+
+/* columnas de links */
+.columna_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.columna_footer h4 {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--color_texto);
+}
+
+.columna_footer a {
+    color: var(--color_apoyo);
+    font-size: 13px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.columna_footer a:hover {
+    color: var(--color_principal);
+}
+
+/* franja del footer */
+#footer_bottom {
+    width: 100%;
+    border-top: 1px solid #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer_bottom p {
+    font-size: 12px;
+    color: var(--color_apoyo);
+    text-align: left;
+}
+
+#footer_bottom a {
+    color: var(--color_apoyo);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+#footer_bottom a:hover {
+    color: var(--color_principal);
+}
+
+/* responsive */
+@media (max-width: 1220px) {
+    #entrenadores {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 920px) {
+    #entrenadores {
+        grid-template-columns: repeat(2, minmax(170px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #encabezado {
+        height: auto;
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    #menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #coach_principal,
+    #agenda {
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .coach_grande {
+        width: 100%;
+        height: 260px;
+    }
+
+    #entrenadores {
+        width: 95%;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    .btn_agenda {
+        width: 100%;
+    }
+
+    #pie {
+        padding: 30px 20px 0 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    #entrenadores {
+        grid-template-columns: 1fr;
+    }
+
+    .marca_coach img {
+        width: min(190px, 76%);
+    }
+}
